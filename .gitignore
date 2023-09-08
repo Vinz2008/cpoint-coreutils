@@ -1,0 +1,15 @@
+*.out
+*.a
+*.ll
+*.o
+*.log
+*.temp
+*.out
+echo
+!echo/
+nproc
+!nproc/
+pwd
+!pwd/
+true
+!true/

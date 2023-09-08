@@ -1,0 +1,7 @@
+import @std/print.cpoint
+import @std/system.cpoint
+
+func main(){
+    printi(system::get_processor_nb())
+    0
+}

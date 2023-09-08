@@ -1,0 +1,8 @@
+import @std/print.cpoint
+
+extern printf(format : i8 ptr ...) int;
+
+func main(){
+    printf("%s\n", argv[1])
+    0
+}

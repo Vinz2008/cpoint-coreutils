@@ -1,0 +1,7 @@
+[project]
+name = "pwd"
+type = "exe"
+src_folder = "."
+
+[build]
+outfile = "pwd"
