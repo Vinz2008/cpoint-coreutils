@@ -5,4 +5,4 @@ license = "GPL"
 type = "exe"
 
 [subfolders]
-projects = ["echo", "nproc", "pwd", "true"]
+projects = ["echo", "nproc", "pwd", "true", "uptime"]

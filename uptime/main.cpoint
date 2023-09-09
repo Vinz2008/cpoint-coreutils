@@ -1,0 +1,32 @@
+struct sysinfo_struct {
+    var uptime : i64
+    var loads[3] : u64
+    var totalram : u64
+    var freeram : u64
+    var sharedram : u64
+    var bufferram : u64
+    var totalswap : u64
+    var freeswap : u64
+    var procs : u16
+    var pad : u16
+    var totalhigh : u64
+    var freehigh : u64
+    var mem_unit : u32
+    var _f[0] : i8
+}
+
+extern sysinfo(info : struct sysinfo_struct) int;
+extern exit(status : int) void;
+
+extern printf(format : i8 ptr ...) int;
+
+func main(){
+    var infos : struct sysinfo_struct 
+    var err = sysinfo(addr infos)
+    if err != 0 {
+        printf("Error in sysinfo : %d\n", err)
+        exit(1)
+    }
+    printf("%ld\n", infos.uptime)
+    0
+}

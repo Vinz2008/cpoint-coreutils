@@ -1,0 +1,7 @@
+[project]
+name = "uptime"
+type = "exe"
+src_folder = "."
+
+[build]
+outfile = "uptime"
