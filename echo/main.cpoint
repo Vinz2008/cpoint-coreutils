@@ -1,5 +1,3 @@
-import @std/print.cpoint
-
 extern printf(format : i8 ptr ...) int;
 
 func main(){
