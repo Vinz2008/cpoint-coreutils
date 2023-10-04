@@ -1,3 +1,5 @@
+import @std/print.cpoint
+
 struct sysinfo_struct {
     var uptime : i64
     var loads[3] : u64
@@ -15,7 +17,7 @@ struct sysinfo_struct {
     var _f[0] : i8
 }
 
-extern sysinfo(info : struct sysinfo_struct) int;
+extern sysinfo(info : struct sysinfo_struct ptr) int;
 extern exit(status : int) void;
 
 extern printf(format : i8 ptr ...) int;
