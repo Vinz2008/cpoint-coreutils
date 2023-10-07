@@ -21,3 +21,5 @@ mkdir
 !mkdir/
 touch
 !touch/
+yes
+!yes/
