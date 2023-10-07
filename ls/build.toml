@@ -1,0 +1,7 @@
+[project]
+name = "ls"
+type = "exe"
+src_folder = "."
+
+[build]
+outfile = "ls"

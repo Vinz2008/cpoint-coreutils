@@ -23,3 +23,5 @@ touch
 !touch/
 yes
 !yes/
+ls
+!ls/
