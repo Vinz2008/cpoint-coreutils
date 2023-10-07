@@ -1,13 +1,11 @@
 import @std/print.cpoint
+import @std/os.cpoint
 
-extern getcwd(buf : i8 ptr, size : int) i8 ptr;
 extern exit(status : int) void;
 
 func main(){
-    var size : int = 4096 * sizeof i8
-    var cwd : i8 ptr = gc_malloc(size)
-    var result : i8 ptr = getcwd(cwd, size)
-    if result != null {
+    var cwd : i8 ptr = os::get_working_dir()
+    if cwd != null {
         printstr(cwd)
     } else {
         printstr("Couldn't find the current working directory")

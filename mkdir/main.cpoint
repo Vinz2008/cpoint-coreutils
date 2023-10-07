@@ -1,0 +1,21 @@
+import @std/os.cpoint
+import @std/panic.cpoint
+import @std/libc.hpoint
+
+func main() int {
+    if (argc < 2){
+        #panic("Not enough args, expected at least one")
+    }
+    // the 0777 octal is 511 in decimal
+    var status = os::mkdir(argv[1], 511)
+    if status == -1 {
+        match status {
+            EACCES => #panic("You don't have write permission to the parent directory"),
+            EEXIST => #panic("The directory already exists"),
+            ENAMETOOLONG => #panic("The name of the directory is too long"),
+            _ => #panic("The directory couldn't be created with an unknown error"),
+        }
+        #panic("You don't have write permission to the parent directory")
+    }
+    0
+}

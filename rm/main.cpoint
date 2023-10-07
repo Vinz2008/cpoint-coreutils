@@ -1,0 +1,12 @@
+import @std/file.cpoint
+import @std/panic.cpoint
+
+func main() int {
+    if (argc < 2){
+        #panic("Not enough args, expected at least one")
+    }
+    if file::remove(argv[1]) == -1 {
+        #panic("Can't remove this file")
+    }
+    0
+}

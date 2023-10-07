@@ -1,0 +1,11 @@
+import @std/print.cpoint
+
+func main(){
+    var string : i8 ptr = "y"
+    if argc > 1 {
+        string = argv[1]
+    }
+    loop {
+        printstr(string)
+    }
+}

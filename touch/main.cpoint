@@ -1,0 +1,12 @@
+import @std/panic.cpoint
+import @std/file.cpoint
+
+func main() int {
+    if (argc < 2){
+        #panic("Not enough args, expected at least one")
+    }
+    if file::create(argv[1]) == -1 {
+        #panic("Couldn't create the file")
+    }
+    0
+}
