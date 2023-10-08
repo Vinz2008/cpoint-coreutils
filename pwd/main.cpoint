@@ -1,10 +1,10 @@
 import @std/print.cpoint
-import @std/os.cpoint
+import @std/env.cpoint
 
 extern exit(status : int) void;
 
 func main(){
-    var cwd : i8 ptr = os::get_working_dir()
+    var cwd : i8 ptr = env::get_current_dir()
     if cwd != null {
         printstr(cwd)
     } else {
