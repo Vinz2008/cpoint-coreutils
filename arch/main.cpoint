@@ -1,0 +1,6 @@
+import @std/print.cpoint
+
+func main(){
+    printstr(#arch())
+    0
+}

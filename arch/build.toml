@@ -1,8 +1,8 @@
 [project]
-name = "echo"
+name = "arch"
 type = "exe"
 src_folder = "."
 
 [build]
-outfile = "echo"
+outfile = "arch"
 gc = false

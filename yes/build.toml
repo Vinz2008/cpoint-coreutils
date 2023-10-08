@@ -5,3 +5,4 @@ src_folder = "."
 
 [build]
 outfile = "yes"
+gc = false

@@ -1,6 +1,17 @@
+import @std/panic.cpoint
+
 extern printf(format : i8 ptr ...) int;
 
 func main(){
-    printf("%s\n", argv[1])
+    if (argc < 2){
+        #panic("Not enough args, expected at least one")
+    }
+    for i = 1, i < argc-1, 1 {
+        if i != 1 {
+            printf(" ")
+        }
+        printf("%s", argv[i])
+    }
+    printf("\n")
     0
 }
