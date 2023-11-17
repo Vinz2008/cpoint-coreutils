@@ -1,0 +1,13 @@
+import @std/libc.hpoint
+import @std/panic.cpoint
+import @std/print.cpoint
+import @std/file.cpoint
+
+func main(){    
+    if (argc <= 1){
+        #panic("Not enough args")
+    }
+    var fd = file::open(argv[1])
+    file::close(fd)
+    0
+}

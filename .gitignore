@@ -27,3 +27,5 @@ ls
 !ls/
 arch
 !arch/
+cat
+!cat/

@@ -5,4 +5,4 @@ license = "GPL"
 type = "exe"
 
 [subfolders]
-projects = ["echo", "nproc", "pwd", "true", "uptime", "rm", "mkdir", "touch", "yes", "ls", "arch"]
+projects = ["echo", "nproc", "pwd", "true", "uptime", "rm", "mkdir", "touch", "yes", "ls", "arch", "cat"]

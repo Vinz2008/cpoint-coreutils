@@ -15,6 +15,10 @@ func main(){
     var ent : struct dirent ptr = readdir(dir)
     while ent != null {
         var s : i8 ptr = gc_malloc(sizeof i8 * 256)
+        var b : i8 ptr = addr ent.d_name
+        var temp[256] = ent.d_name
+        printf("%s\n", ent.d_name)
+        // mem::strcpy(s, b)
         // mem::strcpy(s, ent.d_name)
         // TODO : get from the dirent the name which is in a 256 element array of i8
         ent = readdir(dir)
