@@ -8,6 +8,11 @@ func main(){
         #panic("Not enough args")
     }
     var fd = file::open(argv[1])
+    if fd == -1 {
+        #panic("File not found")
+    }
+    var file_content : i8 ptr = file::read_to_string(fd)
+    #println("{}", file_content)
     file::close(fd)
     0
 }
