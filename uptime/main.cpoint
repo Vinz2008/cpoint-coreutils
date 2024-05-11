@@ -29,6 +29,6 @@ func main(){
         printf("Error in sysinfo : %d\n", err)
         exit(1)
     }
-    printf("%ld\n", infos.uptime)
+    #println("{}", infos.uptime)
     0
 }
