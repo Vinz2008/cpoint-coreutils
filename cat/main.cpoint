@@ -12,7 +12,7 @@ func main(){
         #panic("File not found")
     }
     var file_content : i8 ptr = file::read_to_string(fd)
-    #println("{}", file_content)
+    #print("{}", file_content)
     file::close(fd)
     0
 }
